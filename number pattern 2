@@ -1,25 +1,27 @@
-#include <stdio.h>
-
 int main()  
 {  
-   int i,n,j,c=1;
+   int i,n,j,c=1,m;
    printf("enter  a number");
    scanf("%d",&n);
+   
+   m=c;
    for(i=n;i>=1;i--)
    {
        
        for(j=1;j<=i;j++)
        {
-         printf("%d\t",c);
-            c++;
+           
+       
+         printf("%d\t",m);
+            m++;
            
        }
        
+       
        printf("\n");
-       c=2;
-       
-      
-       
+       c=c+1;
+       m=c;
        
    }
+
 }  
