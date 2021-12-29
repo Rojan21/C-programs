@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()  
+{  
+   int i,n,j,c=1;
+   printf("enter two numbers");
+   scanf("%d",&n);
+   for(i=n;i>=1;i--)
+   {
+       
+       for(j=1;j<=i;j++)
+       {
+         printf("%d\t",c);
+           
+           
+       }
+       
+       printf("\n");
+       c++;
+       
+       
+   }
+}  
