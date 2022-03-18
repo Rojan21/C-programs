@@ -1,0 +1,24 @@
+#include <stdio.h>
+void Arrayfun();
+int main() {
+    
+   
+    Arrayfun();
+    return 0;
+}
+
+void Arrayfun(){
+    int n,i=0,a[100];
+printf("Enter the array limit") ;   
+scanf("%d",&n);
+printf("Enter the array elements");
+while(i<=n-1){
+    scanf("%d",&a[i]);
+    i++;
+}
+ printf("The arary elements are ");
+ for(i=0;i<n;i++){
+     printf("%d\t",a[i]);
+ }
+    
+}
