@@ -1,0 +1,91 @@
+#include <stdio.h>
+#define max 5
+int Stack[max],top=-1;
+int push();
+int pop();
+int peek();
+int display();
+int main() {
+    // Write C code here
+    int n;
+    do{
+         printf("Stack operations are\n");
+         printf("1.Push\n2.Pop\n3.Peek\n4.Display\n5.Exit\n");
+         printf("Enter your choice");
+         scanf("%d",&n);
+         
+         
+         switch(n){
+    case 1: push();
+    break;
+    case 2: pop();
+    break;
+    case 3: peek();
+    break;
+     case 4: display();
+    break;
+     case 5: return 0;
+    break;
+    }
+         
+    }while(n!=5);
+    
+    
+   
+    
+    
+    return 0;
+}
+
+int push(){
+    int item;
+    printf("Enter the element to push");
+    scanf("%d",&item);
+    if(top==max-1){
+          printf("Over flow");
+    }else{
+        top=top+1;
+        Stack[top]=item;
+    }
+    
+}
+
+int pop(){
+    int val = Stack[top];
+    if(top==-1){
+        printf("Underflow\n");
+    }else{
+        
+        printf("popped value is %d\n",val);
+         top=top-1;
+       
+    }
+}
+
+int peek(){
+    int topelement = Stack[top];
+    if(top==-1){
+        printf("Stack is empty\n");
+    }else{
+         printf("top element is %d\n",topelement);
+         
+    }
+}
+
+int display(){
+    int i;
+    if(top==-1){
+        printf("Stack is empty\n");
+    }else{
+        for(i=0;i<=top;i++){
+             printf("%d\t",Stack[i]);
+        }
+    }
+    printf("\n");
+}
+
+
+
+
+
+
